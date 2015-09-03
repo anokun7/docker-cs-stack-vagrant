@@ -20,6 +20,7 @@ Vagrant.configure(2) do |config|
         chmod 755 /vagrant/docker-cs-engine-rpm.sh
         sudo /vagrant/docker-cs-engine-rpm.sh
         sudo yum install docker-engine-cs -y
+        sudo cp /vagrant/docker-centos /etc/sysconfig/docker
         sudo systemctl enable docker.service
         sudo systemctl start docker.service
         sudo usermod -a -G docker vagrant
