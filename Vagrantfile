@@ -12,10 +12,9 @@ Vagrant.configure(2) do |config|
      # Enable provisioning with a shell script 
       centos.vm.provision "shell", inline: <<-SHELLC
      #  sudo yum update && sudo yum upgrade -y
+
      # Install some useful tools
-        sudo yum install telnet -y
-        sudo yum install strace -y
-        sudo yum install nc -y
+        sudo yum install telnet strace nc -y
 
         chmod 755 /vagrant/docker-cs-engine-rpm.sh
         sudo /vagrant/docker-cs-engine-rpm.sh
