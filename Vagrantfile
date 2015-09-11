@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
      #  sudo yum update && sudo yum upgrade -y
 
      # Install some useful tools
-        sudo yum install telnet strace nc -y
+        sudo yum install telnet strace nc lynx -y
 
         chmod 755 /vagrant/docker-cs-engine-rpm.sh
         sudo /vagrant/docker-cs-engine-rpm.sh
