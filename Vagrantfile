@@ -4,7 +4,7 @@ Vagrant.configure(2) do |config|
     config.vm.define "centos71-#{i}" do |centos|
       centos.vm.box = "boxcutter/centos71"
       centos.vm.hostname = "centos#{i}.docker.demo"
-      centos.vm.network "private_network", ip: "10.20.1.#{i}"
+      centos.vm.network "private_network", ip: "10.0.0.#{i}"
       centos.vm.network "forwarded_port", guest: 80, host: "808#{i}"
       centos.vm.network "forwarded_port", guest: 443, host: "443#{i}"
       centos.vm.network "forwarded_port", guest: 2375, host: "2375#{i}"
